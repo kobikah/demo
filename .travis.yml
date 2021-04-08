@@ -15,7 +15,7 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "us-east-2"
   app: "Dockertest-env"
   env: "dtest"
   bucket_name: "elasticbeanstalk-us-east-2-114073191308"
