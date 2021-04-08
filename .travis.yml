@@ -12,7 +12,7 @@ after_success:
   #take built images and push to DOcker hub
   - docker push kobikah/docker-flask-test1
   #test
-
+q
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
