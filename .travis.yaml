@@ -4,13 +4,13 @@ services:
 - docker
 
 script:
-- docker image build -t kobikah/demo .
+- docker image build -t kobikah/docker-flask-test1 .
 
 after_success:
   #log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take built images and push to DOcker hub
-  - docker push kobikah/demo1
+  - docker push kobikah/docker-flask-test1
   #test
 
 #deploy:
