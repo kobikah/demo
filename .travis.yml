@@ -8,7 +8,7 @@ script:
 
 after_success:
   #log in to docker CLI
-  - echo "Dockerhubhub!01" | docker login -u "kobikah" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take built images and push to DOcker hub
   - docker push kobikah/docker-flask-test1
   #test
