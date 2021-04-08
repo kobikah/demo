@@ -13,13 +13,13 @@ after_success:
   - docker push kobikah/docker-flask-test1
   #test
 
-#deploy:
-  #provider: elasticbeanstalk
-  #region: "us-east-1"
-  #app: "dtest"
-  #env: "Dtest-env"
-  #bucket_name: "elasticbeanstalk-us-east-1"
-  #on:
-    #branch: master
-  #access_key_id: $AWS_ACCESS_KEY
-  #secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "Dockertest-env"
+  env: "dtest"
+  bucket_name: "elasticbeanstalk-us-east-2-114073191308"
+  on:
+  branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
